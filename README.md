@@ -96,21 +96,21 @@ Tested with 9600K CPU with Intel® UHD Graphics 630 - Intel's DL-Benchmark
 FPS / Latency-Inference time on Random Generated Dataset
 
 ### Face detection
-![facedetection1](pics/facedetection-fp32.png)
-![facedetection2](pics/facedetection2-fp32.png)
+![facedetection1](https://github.com/geochri/Intel_Edge_AI-Computer_Pointer_controller/blob/master/pics/facedetection-fp32.png)
+![facedetection2](https://github.com/geochri/Intel_Edge_AI-Computer_Pointer_controller/blob/master/pics/facedetection2-fp32-.png)
 
 ### Gaze
-![gaze1](pics/fgaze-FP16.png)          
-![gaze2](pics/gaze-FP32.png)           
-![gaze3](pics/gaze-FP16-INT8.png)      
+![gaze1](https://github.com/geochri/Intel_Edge_AI-Computer_Pointer_controller/blob/master/pics/fgaze-FP16.png)          
+![gaze2](https://github.com/geochri/Intel_Edge_AI-Computer_Pointer_controller/blob/master/pics/gaze-FP32.png)           
+![gaze3](https://github.com/geochri/Intel_Edge_AI-Computer_Pointer_controller/blob/master/pics/gaze-FP16-INT8.png)      
 
 ### Facial landmarks
-![landmarks1](pics/landmarks-fp32.png)
-![landmarks2](pics/landmarks-fp16.png)
-![landmarks3](pics/landmarks-FP16-INT8.png)
+![landmarks1](https://github.com/geochri/Intel_Edge_AI-Computer_Pointer_controller/blob/master/pics/landmarks-fp32.png)
+![landmarks2](https://github.com/geochri/Intel_Edge_AI-Computer_Pointer_controller/blob/master/pics/landmarks-fp16.png)
+![landmarks3](https://github.com/geochri/Intel_Edge_AI-Computer_Pointer_controller/blob/master/pics/landmarks-FP16-INT8.png)
 
-# Head Pose
-![headpose](pics/headpose-FP16.png)
+### Head Pose
+![headpose](https://github.com/geochri/Intel_Edge_AI-Computer_Pointer_controller/blob/master/pics/headpose-FP16.png)
 
 
 The results of FPS and latency time(ms) will be different on real test such as the provided video.
