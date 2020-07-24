@@ -100,7 +100,7 @@ FPS / Latency-Inference time on Random Generated Dataset
 ![facedetection2](https://github.com/geochri/Intel_Edge_AI-Computer_Pointer_controller/blob/master/pics/facedetection2-fp32-.png)
 
 ### Gaze
-![gaze1](https://github.com/geochri/Intel_Edge_AI-Computer_Pointer_controller/blob/master/pics/fgaze-FP16.png)          
+![gaze1](https://github.com/geochri/Intel_Edge_AI-Computer_Pointer_controller/blob/master/pics/gaze-FP16.png)          
 ![gaze2](https://github.com/geochri/Intel_Edge_AI-Computer_Pointer_controller/blob/master/pics/gaze-FP32.png)           
 ![gaze3](https://github.com/geochri/Intel_Edge_AI-Computer_Pointer_controller/blob/master/pics/gaze-FP16-INT8.png)      
 
