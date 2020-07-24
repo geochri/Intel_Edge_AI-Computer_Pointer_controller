@@ -14,7 +14,7 @@ This project has many potentials for future applications such us helping control
 ## Project Set Up and Installation
 Ubuntu-Linux Instructions:
 
-1)You need to install openvino (Tested with: Openvino 2020.1.120)
+1)You need to install openvino (Tested with: Openvino 2020.2.120)
 https://docs.openvinotoolkit.org/latest/openvino_docs_install_guides_installing_openvino_linux.html
 
 2)Clone this repository
