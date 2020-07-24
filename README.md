@@ -13,6 +13,7 @@ This project has many potentials for future applications such us helping control
 
 ## Project Set Up and Installation
 Ubuntu-Linux Instructions:
+
 1)You need to install openvino (Tested with: Openvino 2020.1.120)
 https://docs.openvinotoolkit.org/latest/openvino_docs_install_guides_installing_openvino_linux.html
 
@@ -23,7 +24,9 @@ Ubuntu example: source /opt/intel/openvino/bin/setupvars.sh
 
 4)Download the 4 models via the model_downloader from the openvino
 https://docs.openvinotoolkit.org/latest/omz_tools_downloader_README.html#model_downloader_usage
+
 Ubuntu Example: 
+
 ./downloader.py --name face-detection-adas-binary-0001
 
 Necessery models:
@@ -70,6 +73,7 @@ Required flags to run: fd,fl,hp,ga,d,i,s,vflag
                                           fd = face detection, fl = facial landmarks
                                           hp = head pose, ga = gaze
 ```
+*Visual examples: check the pics inside src folder 
 
 Models:
 
@@ -79,7 +83,7 @@ Head Pose Estimation Model: https://docs.openvinotoolkit.org/latest/_models_inte
 
 Facial Landmarks Detection Model: https://docs.openvinotoolkit.org/latest/_models_intel_landmarks_regression_retail_0009_description_landmarks_regression_retail_0009.html
 
-Gaze Estimation Model:https://docs.openvinotoolkit.org/latest/_models_intel_gaze_estimation_adas_0002_description_gaze_estimation_adas_0002.html
+Gaze Estimation Model: https://docs.openvinotoolkit.org/latest/_models_intel_gaze_estimation_adas_0002_description_gaze_estimation_adas_0002.html
 
 
 
