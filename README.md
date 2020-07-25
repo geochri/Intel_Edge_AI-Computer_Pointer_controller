@@ -117,6 +117,20 @@ FPS / Latency-Inference time on Random Generated Dataset
 ### Head Pose
 ![headpose](https://github.com/geochri/Intel_Edge_AI-Computer_Pointer_controller/blob/master/pics/headpose-FP16.png)
 
+### Plots
+![plot1](https://github.com/geochri/Intel_Edge_AI-Computer_Pointer_controller/blob/master/pics/gaze-fps.jpg)
+![plot2](https://github.com/geochri/Intel_Edge_AI-Computer_Pointer_controller/blob/master/pics/gaze-inference.jpg)
+![plot3](https://github.com/geochri/Intel_Edge_AI-Computer_Pointer_controller/blob/master/pics/landmarks-fps.jpg)
+![plot4](https://github.com/geochri/Intel_Edge_AI-Computer_Pointer_controller/blob/master/pics/landmarks-inference.jpg)
+![plot5](https://github.com/geochri/Intel_Edge_AI-Computer_Pointer_controller/blob/master/pics/head-fps.jpg)
+![plot6](https://github.com/geochri/Intel_Edge_AI-Computer_Pointer_controller/blob/master/pics/head-inference.jpg)
+![plot7](https://github.com/geochri/Intel_Edge_AI-Computer_Pointer_controller/blob/master/pics/face-fps.jpg)
+![plot8](https://github.com/geochri/Intel_Edge_AI-Computer_Pointer_controller/blob/master/pics/face-inference.jpg)
+
+
+
+
+
 
 The results of FPS and latency time(ms) will be different on real test such as the provided video.
 But we already know from the graphs-stats of DL-Benchmark tool that the CPU is better than IGPU on this project.
