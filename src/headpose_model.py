@@ -25,15 +25,10 @@ class Model_HeadPose(Model):
         pre_image = self.preprocess_input(self.image)
         input_name = self.input_name
         input_dict = {input_name: pre_image}
-#         infer = self.net_exec.start_async(request_id=0, inputs=input_dict)
-#         status = infer.wait()
+
         results = self.net_exec.infer(input_dict)
         outputs = self.preprocess_output(results)
-#         if status == 0:
-#             results = infer.outputs[self.output_name]
-#             print(results)
-#             print(self.input_name)
-#             outputs = self.preprocess_output(results)
+
         return outputs
 
     def check_model(self):
