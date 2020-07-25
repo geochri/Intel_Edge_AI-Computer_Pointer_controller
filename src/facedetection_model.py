@@ -23,21 +23,9 @@ class Model_Face(Model):
         pre_image = self.preprocess_input(self.image)
         input_name = self.input_name
         input_dict = {input_name: pre_image}
-#         infer = self.net_exec.start_async(request_id=0, inputs=input_dict)
-#         status = infer.wait()
+
         face = []
-#         if status == 0:
-# #             print(infer.outputs)
-# #             print(self.output_name)
-#             results = infer.outputs[self.output_name]
-#             outputs = self.preprocess_output(results, thres)
-#             outputs = outputs[0]
-#             height = self.image.shape[0]
-#             width = self.image.shape[1]
-#             outputs = outputs* np.array([width, height, width, height])
-#             outputs = outputs.astype(np.int32)
-#             face = self.image[outputs[1]:outputs[3], outputs[0]:outputs[2]]
-            
+        
         results = self.net_exec.infer(input_dict)
         outputs = self.preprocess_output(results, thres)
         outputs = outputs[0]
