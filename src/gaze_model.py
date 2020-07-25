@@ -25,19 +25,13 @@ class Model_Gaze(Model):
             self.input_name = [k for k in self.net.inputs.keys()]#next(iter(self.net.inputs))
             self.input_shape = self.net.inputs[self.input_name[1]].shape
             self.output_name = [k for k in self.net.outputs.keys()]#next(iter(self.net.outputs))
-#             self.output_shape = self.net.outputs[self.output_name].shape
             print('Re-Initialise.. completed.')
         except Exception as e:
             raise ValueError('Something is wrong with input and output values..')
         left, right = self.preprocess_input(left_eye, right_eye)
 
         input_dict = {'head_pose_angles':head_pose, 'left_eye_image':left, 'right_eye_image':right}
-#         infer = self.net_exec.start_async(request_id=0, inputs=input_dict)
-#         status = infer.wait()
-        
-#         if status == 0:
-#             outputs = infer.outputs[self.output_name]
-#             coords, gaze_vector = self.preprocess_output(outputs, head_pose)
+
         results = self.net_exec.infer(input_dict)
         coords, gaze_vector = self.preprocess_output(results, head_pose)
         return coords, gaze_vector
