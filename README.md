@@ -89,7 +89,7 @@ Gaze Estimation Model: https://docs.openvinotoolkit.org/latest/_models_intel_gaz
 
 Tree:
 
-
+```
 .
 ├── bin
 │   └── demo.mp4
@@ -162,7 +162,7 @@ Tree:
         ├── headpose_model.cpython-37.pyc
         ├── input_feeder.cpython-37.pyc
         └── mouse_controller.cpython-37.pyc
-
+```
 19 directories, 52 files
 
 bin folder -> the provided video
