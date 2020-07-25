@@ -73,6 +73,7 @@ Required flags to run: fd,fl,hp,ga,d,i,s,vflag
                                           Values: fd hp fl ga
                                           fd = face detection, fl = facial landmarks
                                           hp = head pose, ga = gaze
+    "-vsave" or "--visual_save"         = Visual save option every 10 frames ('y' or 'n')
 ```
 *Visual examples: check the pics inside src folder 
 
@@ -86,6 +87,97 @@ Facial Landmarks Detection Model: https://docs.openvinotoolkit.org/latest/_model
 
 Gaze Estimation Model: https://docs.openvinotoolkit.org/latest/_models_intel_gaze_estimation_adas_0002_description_gaze_estimation_adas_0002.html
 
+Tree:
+
+
+.
+├── bin
+│   └── demo.mp4
+├── models
+│   ├── face-detection-adas-binary-0001
+│   │   └── FP32-INT1
+│   │       ├── face-detection-adas-binary-0001.bin
+│   │       └── face-detection-adas-binary-0001.xml
+│   ├── gaze-estimation-adas-0002
+│   │   ├── FP16
+│   │   │   ├── gaze-estimation-adas-0002.bin
+│   │   │   └── gaze-estimation-adas-0002.xml
+│   │   ├── FP16-INT8
+│   │   │   ├── gaze-estimation-adas-0002.bin
+│   │   │   └── gaze-estimation-adas-0002.xml
+│   │   └── FP32
+│   │       ├── gaze-estimation-adas-0002.bin
+│   │       └── gaze-estimation-adas-0002.xml
+│   ├── head-pose-estimation-adas-0001
+│   │   ├── FP16
+│   │   │   ├── head-pose-estimation-adas-0001.bin
+│   │   │   └── head-pose-estimation-adas-0001.xml
+│   │   ├── FP16-INT8
+│   │   │   ├── head-pose-estimation-adas-0001.bin
+│   │   │   └── head-pose-estimation-adas-0001.xml
+│   │   └── FP32
+│   │       ├── head-pose-estimation-adas-0001.bin
+│   │       └── head-pose-estimation-adas-0001.xml
+│   └── landmarks-regression-retail-0009
+│       ├── FP16
+│       │   ├── landmarks-regression-retail-0009.bin
+│       │   └── landmarks-regression-retail-0009.xml
+│       ├── FP16-INT8
+│       │   ├── landmarks-regression-retail-0009.bin
+│       │   └── landmarks-regression-retail-0009.xml
+│       └── FP32
+│           ├── landmarks-regression-retail-0009.bin
+│           └── landmarks-regression-retail-0009.xml
+├── pics
+│   ├── facedetection2-fp32-.png
+│   ├── facedetection-fp32.png
+│   ├── gaze-FP16-INT8.png
+│   ├── gaze-FP16.png
+│   ├── gaze-FP32.png
+│   ├── headpose-FP16.png
+│   ├── landmarks-FP16-INT8.png
+│   ├── landmarks-fp16.png
+│   └── landmarks-fp32.png
+├── README.md
+├── requirements.txt
+└── src
+    ├── 10_visual.jpg
+    ├── 20_visual.jpg
+    ├── 30_visual.jpg
+    ├── 40_visual.jpg
+    ├── 50_visual.jpg
+    ├── base_model.py
+    ├── facedetection_model.py
+    ├── faciallandmarks_model.py
+    ├── gaze_model.py
+    ├── headpose_model.py
+    ├── input_feeder.py
+    ├── main.py
+    ├── mouse_controller.py
+    └── __pycache__
+        ├── base_model.cpython-37.pyc
+        ├── facedetection_model.cpython-37.pyc
+        ├── faciallandmarks_model.cpython-37.pyc
+        ├── gaze_model.cpython-37.pyc
+        ├── headpose_model.cpython-37.pyc
+        ├── input_feeder.cpython-37.pyc
+        └── mouse_controller.cpython-37.pyc
+
+19 directories, 52 files
+
+bin folder -> the provided video
+models folder -> the model that you need to have in order to run the app (check how to download them above)
+requirements.txt -> the necessery libraries
+pics -> some screenshots of DL-Benchmark tool from the models
+src:
+    *_visual.jpg files -> the save pic of the visualazitation (vsave flag)
+    base_model.py -> the base class model
+    facedetection_model.py -> Face Detection model class for handling the facedetection model
+    faciallandmarks_model.py -> Facial landmarks estimation class for handling the landmarks estimation model
+    gaze_model.py -> Gaze estimation model class for handling the gaze estimation model
+    headpose_model.py -> Head pose model class for handling the head pose estimation model
+    input_feeder.py -> The class that can handle the input source (cam or video file)
+    mouse_controller.py -> the class that can handle via the pyautogui lib the pointer potitions
 
 
 
@@ -118,14 +210,14 @@ FPS / Latency-Inference time on Random Generated Dataset
 ![headpose](https://github.com/geochri/Intel_Edge_AI-Computer_Pointer_controller/blob/master/pics/headpose-FP16.png)
 
 ### Plots
-![plot1](https://github.com/geochri/Intel_Edge_AI-Computer_Pointer_controller/blob/master/pics/gaze-fps.jpg)
-![plot2](https://github.com/geochri/Intel_Edge_AI-Computer_Pointer_controller/blob/master/pics/gaze-inference.jpg)
-![plot3](https://github.com/geochri/Intel_Edge_AI-Computer_Pointer_controller/blob/master/pics/landmarks-fps.jpg)
-![plot4](https://github.com/geochri/Intel_Edge_AI-Computer_Pointer_controller/blob/master/pics/landmarks-inference.jpg)
-![plot5](https://github.com/geochri/Intel_Edge_AI-Computer_Pointer_controller/blob/master/pics/head-fps.jpg)
-![plot6](https://github.com/geochri/Intel_Edge_AI-Computer_Pointer_controller/blob/master/pics/head-inference.jpg)
-![plot7](https://github.com/geochri/Intel_Edge_AI-Computer_Pointer_controller/blob/master/pics/face-fps.jpg)
-![plot8](https://github.com/geochri/Intel_Edge_AI-Computer_Pointer_controller/blob/master/pics/face-inference.jpg)
+![plot1](https://github.com/geochri/Intel_Edge_AI-Computer_Pointer_controller/blob/master/pics/gaze-fps.png)
+![plot2](https://github.com/geochri/Intel_Edge_AI-Computer_Pointer_controller/blob/master/pics/gaze-inference.png)
+![plot3](https://github.com/geochri/Intel_Edge_AI-Computer_Pointer_controller/blob/master/pics/landmarks-fps.png)
+![plot4](https://github.com/geochri/Intel_Edge_AI-Computer_Pointer_controller/blob/master/pics/landmarks-inference.png)
+![plot5](https://github.com/geochri/Intel_Edge_AI-Computer_Pointer_controller/blob/master/pics/head-fps.png)
+![plot6](https://github.com/geochri/Intel_Edge_AI-Computer_Pointer_controller/blob/master/pics/head-inference.png)
+![plot7](https://github.com/geochri/Intel_Edge_AI-Computer_Pointer_controller/blob/master/pics/face-fps.png)
+![plot8](https://github.com/geochri/Intel_Edge_AI-Computer_Pointer_controller/blob/master/pics/face-inference.png)
 
 
 
@@ -135,6 +227,9 @@ FPS / Latency-Inference time on Random Generated Dataset
 The results of FPS and latency time(ms) will be different on real test such as the provided video.
 But we already know from the graphs-stats of DL-Benchmark tool that the CPU is better than IGPU on this project.
 
+After becnhmarking with different precisions and my available devices (CPU and iGPU on same cases) I can clearly see the effect of the model's size ( less MB )
+from the different precisions FP32, FP16, FP16-INT8. The trick on the different precisions is the computations precisions on the floating numbers etc.
+This is a very good technique on the CV, DL and ML  fields because we can have good effecient models. There is always a trade off on the precision strategy such as the accuracy. When we are using lower precision model the results may be not as good as FP32 or FP16. In our case, FP16-INT8 is not as good as FP16 because in order to have a good balance between accuracy detection and effeciency we need to keep a better precision on the computation parts. The reason is that the first two models are the most crucial parts of this "chain". If the first model can not detect corretly the face we will have problems on the rest of the models. Also we can see that FP16-INT8 does not have good enough differences from the FP16. The only good difference is the model's size. Since we want the right balance of effeciency  I will choose the FP16 models. Another observation on the benchmark is the iGPU performance. I believe that the iGPU could perform a little better with async because of the multi core computations. GPU  can procces more frames per second compared to any other hardware and mainly during FP16 because GPU has multiple core and instruction sets that are specifically optimized to run 16bit floating point operations.
 
 ### Edge Cases
 From what I see on DL-Benchmark tool maybe the right device for this project, even if we had a FPGA device, is the CPU device.
