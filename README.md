@@ -131,13 +131,22 @@ Tree:
 ├── pics
 │   ├── facedetection2-fp32-.png
 │   ├── facedetection-fp32.png
+│   ├── face-fps.png
+│   ├── face-inference.png
 │   ├── gaze-FP16-INT8.png
 │   ├── gaze-FP16.png
 │   ├── gaze-FP32.png
+│   ├── gaze-fps.png
+│   ├── gaze-inference.png
+│   ├── head-fps.png
+│   ├── head-inference.png
 │   ├── headpose-FP16.png
 │   ├── landmarks-FP16-INT8.png
 │   ├── landmarks-fp16.png
-│   └── landmarks-fp32.png
+│   ├── landmarks-fp32.png
+│   ├── landmarks-fps.png
+│   └── landmarks-inference.png
+├── project3-intel_excel.pdf
 ├── README.md
 ├── requirements.txt
 └── src
@@ -162,22 +171,38 @@ Tree:
         ├── headpose_model.cpython-37.pyc
         ├── input_feeder.cpython-37.pyc
         └── mouse_controller.cpython-37.pyc
+
+19 directories, 61 files
 ```
-19 directories, 52 files
 
 bin folder -> the provided video
+
 models folder -> the model that you need to have in order to run the app (check how to download them above)
+
 requirements.txt -> the necessery libraries
+
 pics -> some screenshots of DL-Benchmark tool from the models
+
 src:
+```
     *_visual.jpg files -> the save pic of the visualazitation (vsave flag)
-    base_model.py -> the base class model
-    facedetection_model.py -> Face Detection model class for handling the facedetection model
-    faciallandmarks_model.py -> Facial landmarks estimation class for handling the landmarks estimation model
-    gaze_model.py -> Gaze estimation model class for handling the gaze estimation model
-    headpose_model.py -> Head pose model class for handling the head pose estimation model
-    input_feeder.py -> The class that can handle the input source (cam or video file)
-    mouse_controller.py -> the class that can handle via the pyautogui lib the pointer potitions
+``` 
+base_model.py -> the base class model
+    
+facedetection_model.py -> Face Detection model class for handling the facedetection model
+    
+faciallandmarks_model.py -> Facial landmarks estimation class for handling the landmarks estimation model
+    
+gaze_model.py -> Gaze estimation model class for handling the gaze estimation model
+    
+headpose_model.py -> Head pose model class for handling the head pose estimation model
+    
+input_feeder.py -> The class that can handle the input source (cam or video file)
+    
+mouse_controller.py -> the class that can handle via the pyautogui lib the pointer potitions
+    
+project3-intel_excel.pdf -> excel benchmark table 
+
 
 
 
