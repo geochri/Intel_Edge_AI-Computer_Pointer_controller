@@ -1,5 +1,5 @@
 # Computer Pointer Controller
-Openvino version: 2020.2.120
+Openvino version: 2020.2.120, Python 3.7.3
 In this project I used 4 pretrained models provided by Intel to build a pointer controller app.
 The steps that I followed are: 
 
