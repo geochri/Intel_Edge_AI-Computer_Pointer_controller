@@ -36,7 +36,7 @@ Necessery models:
 3. landmarks-regression-retail-0009
 4. gaze-estimation-adas-0002
 
-
+Check the requirements file.
 
 ## Demo
 To run the app you need to run the main.py file
