@@ -26,32 +26,7 @@ class Model_Faciallandmark(Model):
         input_dict = {input_name: pre_image}
         results = self.net_exec.infer(input_dict)
         outputs = self.preprocess_output(results)
-#         infer = self.net_exec.start_async(request_id=0, inputs=input_dict)
-#         status = infer.wait()
-        
-#         if status == 0:
-#             results = infer.outputs[self.output_name]
-#             outputs = self.preprocess_output(results)
-            
-#             height = self.image.shape[0]
-#             width = self.image.shape[1]
-#             outputs = outputs* np.array([width, height, width, height])
-#             outputs = outputs.astype(np.int32)
-            
-#             left_eyexmin = outputs[0] - offset
-#             left_eyexmax = outputs[1] - offset
-#             left_eyeymin = outputs[0] + offset
-#             left_eyeymax = outputs[1] + offset
-            
-#             right_eyexmin = outputs[2] - offset
-#             right_eyexmax = outputs[3] - offset
-#             right_eyeymin = outputs[2] + offset
-#             right_eyeymax = outputs[3] + offset
-            
-#             left_eye_range = self.image[left_eyexmin:left_eyexmax, left_eyeymin:left_eyeymax]
-#             right_eye_range = self.image[right_eyexmin:right_eyexmax, right_eyeymin:right_eyeymax]
-#             facial = [[left_eyexmin,left_eyeymin, left_eyexmax,left_eyeymax],
-#                       [right_eyexmin,right_eyeymin, right_eyexmax,right_eyeymax]]
+
         height = self.image.shape[0]
         width = self.image.shape[1]
         outputs = outputs* np.array([width, height, width, height])
