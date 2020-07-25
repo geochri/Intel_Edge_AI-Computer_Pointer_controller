@@ -1,5 +1,6 @@
 import os
 import logging
+from base_model import Model
 from facedetection_model import Model_Face
 from faciallandmarks_model import Model_Faciallandmark
 from headpose_model import Model_HeadPose
@@ -42,14 +43,18 @@ def build_argparser():
                              "Values: fd hp fl ga"
                              "fd = face detection, fl = facial landmarks"
                              "hp = head pose, ga = gaze")
+    parser.add_argument("-vsave", "--visual_save", required=False, type=str, default='n',
+                       help="Visual save option every 10 frame ('y' or 'n')")
     return parser
 
 
 def main():
+
     args = build_argparser().parse_args()
     visual = args.visual_flag
     log = logging.getLogger()
     input_source = args.input_source
+    
     try:
         video_path = args.input_path
     except Exception as e:
@@ -73,8 +78,9 @@ def main():
     ## 'fast'(1), 'slow'(10), 'medium', 'slow-med' - speed
 #     mouse = MouseController('low-med', 'slow-med')
     mouse = MouseController(500,4)
-    
+
     feed.load_data()
+            
     # load models
     fd.load_model()
     hp.load_model()
@@ -126,8 +132,9 @@ def main():
             cv2.namedWindow('Visualization', cv2.WINDOW_AUTOSIZE)
             cv2.moveWindow('Visualization', 900,900)    
             cv2.imshow('Visualization', cv2.resize(visual_frame, (500,500)))
-#             if count%10==0:
-#                 cv2.imwrite(str(count)+'_visual.jpg',visual_frame)
+            if args.visual_save.lower() == 'y':
+                if count%10==0:
+                    cv2.imwrite(str(count)+'_visual.jpg',visual_frame)
         if count%5==0:
             mouse.move(mouse_coord[0], mouse_coord[1])
         if key==27:
