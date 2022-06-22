@@ -6,6 +6,6 @@ Pillow==6.1.0
 requests==2.22.0
 virtualenv==16.7.9
 pyautogui==0.9.50
-numpy==1.16.4
+numpy==1.22.0
 requests==2.22.0
 pandas==0.24.2
